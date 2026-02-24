@@ -1,12 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/HeroSection";
+import CategoryScroll from "@/components/CategoryScroll";
+import RestaurantSection from "@/components/RestaurantSection";
+import PopularDishes from "@/components/PopularDishes";
+import BottomNav from "@/components/BottomNav";
+import CartSheet from "@/components/CartSheet";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background warm-glow">
+      <header className="flex items-center justify-between px-4 py-3">
+        <div>
+          <p className="text-xs text-muted-foreground font-medium">Good evening 👋</p>
+          <h2 className="text-base font-bold">What would you like to eat?</h2>
+        </div>
+        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-lg">
+          🍽️
+        </div>
+      </header>
+
+      <main className="max-w-5xl mx-auto">
+        <HeroSection />
+        <CategoryScroll />
+        <RestaurantSection />
+        <PopularDishes />
+      </main>
+
+      <BottomNav />
+      <CartSheet />
     </div>
   );
 };
